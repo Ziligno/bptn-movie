@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "../App.css";
 import axios from "axios";
 import Youtube from "react-youtube";
 import MovieCard from "./MovieCard";
 
 function Home() {
-  let navigate = useNavigate();
-
   const MOVIE_API = "https://api.themoviedb.org/3/";
   const SEARCH_API = MOVIE_API + "search/movie";
   const DISCOVER_API = MOVIE_API + "movie/popular";
@@ -23,11 +20,6 @@ function Home() {
   useEffect(() => {
     fetchMovies();
   });
-
-  const gotoLiked = () => {
-
-    navigate("../Liked", { replace: true });
-  };
 
   const fetchMovies = async (event) => {
     if (event) {

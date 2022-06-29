@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
 import "../App.css";
-import axios from "axios";
 
+function Liked() {
+  const renderMovies = () => {};
 
-
-function Liked() { 
-
-    return (
-        <div>
-            <h2>Liked Movies</h2>
-        </div>
-    )
+  return (
+    <div className="App">
+      <header className="center-max-size header">
+        <span className={"brand"}>Liked Movies</span>
+      </header>
+      <div className={"center-max-size container"}>{renderMovies()}</div>
+    </div>
+  );
 }
 
-export default Liked
+export default Liked;
